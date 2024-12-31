@@ -31,7 +31,7 @@
         <a class="nav-link" href="/addProduct">Add Products</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" action="" method="POST">
+    <form class="form-inline my-2 my-lg-0" action="{{ route('showProduct') }}" method="GET">
       @csrf
       <input class="form-control mr-sm-2" id="search" name="keyword" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
