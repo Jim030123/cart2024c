@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('guest')->name('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// })->middleware('guest')->name('welcome');
 
 Route::get('/contactUs', function () {
     return view('contact');
@@ -62,5 +62,5 @@ Route::get('/user', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])
-    ->name('home')
-    ->middleware('auth');
+    ->name('home');
+    // ->middleware('auth');

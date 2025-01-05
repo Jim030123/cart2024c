@@ -27,16 +27,16 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
-        $this->middleware('auth')->only('logout');
+        // $this->middleware('guest')->except('logout');
+        // $this->middleware('auth')->only('logout');
     }
 
     protected function redirectTo()
     {
-        \Log::info('User role: ' . auth()->user()->role);
-        if (strtolower(auth()->user()->role) === 'admin') {
-            return '/admin';
-        }
-        return route('user');
+        // \Log::info('User role: ' . auth()->user()->role);
+        // if (strtolower(auth()->user()->role) === 'admin') {
+        //     return '/admin';
+        // }
+        // return route('user');
     }
 }
